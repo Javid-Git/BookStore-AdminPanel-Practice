@@ -19,6 +19,7 @@ namespace Task13
             LibraryManager manager = new LibraryManager();
             manager.Add(book);
             manager.Filter("if", genre);
+            manager.Search("detective");
         }
     }
 }
