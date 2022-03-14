@@ -47,7 +47,11 @@ namespace Task13.Services
 
         public Book ShowInfo(string name)
         {
-            return _books.Find(a => (a.Name == name));
+            Book book = _books.Find(a => (a.Name == name));
+            if (book != null)
+            {
+                return book;
+            }throw new BookNotFoundException($"{name} adla kitab yoxdur!");
         }
     }
 }
